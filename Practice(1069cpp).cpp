@@ -6,14 +6,15 @@ using namespace std;
 
 int main()
 {
-    int M;
-    cin >> M;
-
-    vector<int> prufer(M);
-    for (int i = 0; i < M; i++) {
-        cin >> prufer[i];
+    vector<int> prufer;
+    {
+        int x;
+        while (cin >> x) {
+            prufer.push_back(x);
+        }
     }
     
+    int M = (int)prufer.size();
     int N = M + 1;
 
     vector<int> freq(N + 1, 0);
